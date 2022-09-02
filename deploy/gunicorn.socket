@@ -1,0 +1,11 @@
+# place at /etc/systemd/system/gunicorn.socket
+# to run sudo systemctl start gunicorn.socket
+
+[Unit]
+Description=gunicorn socket
+
+[Socket]
+ListenStream=/run/gunicorn.sock
+
+[Install]
+WantedBy=sockets.target
